@@ -28,3 +28,24 @@ const str = 'abcde';
 // }
 
 // number >= 55 && number <= 99 ?  alert("Число потрапляє в діапазон") : alert("Число не потрапляє в діапазон");
+
+// Є 3 вікові групи : діти (0-16), дорослі(17-60), пенсіонери (61-100).
+// До якої групи відноситься Максим, якщо йому 55 років.Назву групи вивести на екран.
+
+/* const ageMaks = 102;
+if (ageMaks >= 0 && ageMaks <= 16) {
+    console.log("діти");
+    
+}
+else if (ageMaks >= 17 && ageMaks <= 60) {
+    console.log("дорослі");
+    
+}
+else if (ageMaks <=61 && ageMaks <= 100) {
+    console.log("пенсіонери");
+    
+}
+else {
+console.log("error");
+
+} */
