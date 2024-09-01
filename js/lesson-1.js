@@ -54,7 +54,7 @@ console.log("error");
 // Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
 // та залежно від виду напою оголоси суму досплати.Використовувати switch.
 
-const drink = prompt("оберіть напій").toLowerCase();
+// const drink = prompt("оберіть напій").toLowerCase();
 
 // function orderDrink(product) {
 //   switch (product) {
@@ -73,23 +73,39 @@ const drink = prompt("оберіть напій").toLowerCase();
 // }
 // alert(orderDrink(drink));
 
-function orderDrink(product) {
-  let price = 0;
-  switch (product) {
-    case "кава":
-      price = 60;
-      break;
+// function orderDrink(product) {
+//   let price = 0;
+//   switch (product) {
+//     case "кава":
+//       price = 60;
+//       break;
 
-    case "чай":
-      price = 40;
-      break;
-    case "сік":
-      price = 30;
-      break;
+//     case "чай":
+//       price = 40;
+//       break;
+//     case "сік":
+//       price = 30;
+//       break;
 
-    default:
-      return "такого напою немає";
-  }
-  return `сумма до сплати ${price} грн`;
+//     default:
+//       return "такого напою немає";
+//   }
+//   return `сумма до сплати ${price} грн`;
+// }
+// alert(orderDrink(drink));
+
+// for (let i = 1; i <= 1000; i++) {
+//   console.log(i);
+// }
+
+//  Виведіть методом console.log() зірочки від 1 до 7 штук у вигляді трикутника таким чино
+// *
+// **
+// ***
+// ****
+// *****
+let star = "*";
+for (let i = 1; i <= 7; i++) {
+  console.log(star);
+  star += "*";
 }
-alert(orderDrink(drink));
