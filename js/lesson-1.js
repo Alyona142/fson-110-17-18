@@ -4,14 +4,14 @@
 // Перевірте, що першим символом цього рядка є буква 'a'.
 // Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 
-const str = 'abcde'; 
+const str = "abcde";
 //    if (str.startsWith("a") ) {
 //     console.log("yes");
 
 // } else {
 //     console.log("no");
-    
-// } 
+
+// }
 
 // str.startsWith("a")? console.log("yes") : console.log("no");
 
@@ -49,3 +49,47 @@ else {
 console.log("error");
 
 } */
+
+//* Конструкція switch
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch.
+
+const drink = prompt("оберіть напій").toLowerCase();
+
+// function orderDrink(product) {
+//   switch (product) {
+//     case "кава":
+//       return "сумма до сплати 60 грн";
+
+//     case "чай":
+//       return "сумма до сплати 40 грн";
+
+//     case "сік":
+//       return "сумма до сплати 30 грн";
+
+//     default:
+//       return "такого напою немає";
+//   }
+// }
+// alert(orderDrink(drink));
+
+function orderDrink(product) {
+  let price = 0;
+  switch (product) {
+    case "кава":
+      price = 60;
+      break;
+
+    case "чай":
+      price = 40;
+      break;
+    case "сік":
+      price = 30;
+      break;
+
+    default:
+      return "такого напою немає";
+  }
+  return `сумма до сплати ${price} грн`;
+}
+alert(orderDrink(drink));
