@@ -28,7 +28,7 @@
 // }
 
 //TODO:=========task-2=================
-// Порахуй кількість слів у рядку, 
+// Порахуй кількість слів у рядку,
 // використовуючи методи масивів і створи новий рядок, розділений дефісами у нижньому регістрі.
 
 // const message = 'JavaScript is a popular programming language.';
@@ -40,3 +40,26 @@
 
 // const qwerty =[];
 
+// Перевірити, чи містить масив заданий елемент. Якщо містить, видалити його, якщо ні - додати в кінець масиву.///
+// const wordsArray = ['JavaScript', 'HTML', 'CSS'];
+// const item = 'CSS';
+// const index = wordsArray.indexOf(item);
+// index !== -1 ? wordsArray.splice(index, 1) : wordsArray.push(item);
+// console.log(wordsArray);
+
+// // Створити масив з 10-ти чисел. Напиши функцію яа буде шукати найбільше число
+// const numbers = [5, 8, 11, 204, 55, 74, 45, 12, 95, 100]
+// // function findMaxNumber(array) {
+// //     return Math.max(...array)
+// // }
+// // console.log(findMaxNumber(numbers));
+// function findMaxNumber(array) {
+//     let maxNumber = array[0];
+//     for  (const number of array) {
+//         if (maxNumber < number) {
+//             maxNumber = number
+//         }
+//     }
+//     return maxNumber
+// };
+// console.log(findMaxNumber(numbers));
