@@ -87,3 +87,63 @@
 //   return a < b ? a : b;
 // }
 // console.log(min());
+
+// * Літерал об'єкта
+//TODO:============task-1=========================
+// Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
+// Послідовно:
+// 1 додати поле mood зі значенням 'happy'
+// 2 замінити hobby на 'skydiving'
+
+// const humen = {
+//   firstName: "Bob",
+//   hobby: "footbol",
+//   age: 25,
+
+//   greet() {
+//     console.log(`Hello ${this.firstName}`);
+//   },
+// };
+// console.log(humen["age"]);
+// humen.mood = "happy";
+// humen.hobby = "skydiving";
+// console.log(humen.greet());
+// console.log(this);
+
+// for (const key in humen) {
+//   if (humen.hasOwnProperty(key)) {
+//     console.log(key);
+//     console.log(humen[key]);
+//   }
+// }
+
+//TODO:============task-3======================================================
+// У нас є об'єкт, у якому зберігатимуться зарплати
+// нашої команди
+// Напишіть код для сумування всіх зарплат і
+// збережіть його результат у змінній sum.
+// Якщо об'єкт salaries порожній, то результат має бути 0
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+// function totalSolary(obj) {
+//   let totalSum = 0;
+//   for (const key in obj) {
+//     if (obj.hasOwnProperty(key)) {
+//       totalSum += obj[key];
+//     }
+//   }
+//   return totalSum;
+// }
+
+// function totalSolary(obj) {
+//   let totalSum = 0;
+//   for (const number of Object.values(obj)) {
+//     totalSum += number;
+//   }
+//   return totalSum;
+// }
+// console.log(totalSolary(salaries));
