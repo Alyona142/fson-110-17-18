@@ -11,20 +11,18 @@
 // const idx = styles.indexOf('bluz');
 // if (idx !== -1) {
 //     styles[idx] = "classic"
-    
+
 // }
 // // console.log(styles);
 
 // for (let i = 0; i < styles.length; i++) {
 //     console.log(`${i + 1} - ${styles[i]}`);
-    
-    
-    
+
 // }
 
 // for (const style of styles) {
 //     console.log(style);
-    
+
 // }
 
 //TODO:=========task-2=================
@@ -36,7 +34,6 @@
 // const newMessage = arrWords.join('-').toLocaleLowerCase();
 
 // console.log(newMessage);
-
 
 // const qwerty =[];
 
@@ -63,3 +60,30 @@
 //     return maxNumber
 // };
 // console.log(findMaxNumber(numbers));
+
+//TODO:=========task-4=================
+//Напишіть функцію calculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+// function calculateAverage() {
+//   let totalSum = 0;
+//   let count = 0;
+//   for (const number of arguments) {
+//     if (typeof number === "number") {
+//       totalSum += number;
+//       count++;
+//     }
+//   }
+//   return totalSum / count;
+// }
+// console.log(calculateAverage(10, 20, "lalalal"));
+// console.log(calculateAverage(10, 20, 30, 40, 50));
+
+// Напишіть функцію min(a, b), яка повертає
+// менше з чисел a, b
+
+// function min(a = 1 , b = 5) {
+//   return a < b ? a : b;
+// }
+// console.log(min());
