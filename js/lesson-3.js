@@ -31,3 +31,40 @@
 //const getNewArray = (array) => array.map((number) => Math.pow(number, 2));
 
 //console.log(getNewArray([1, 2, 3, 4, 5]));
+
+//TODO:=========task-02=================
+// Дано масив об'єктів {id: 1, values: [1, 2, 3]}, {id: 2, values: [4, 5, 6]}, {id: 3, values: [7, 8, 9]}. Створіть новий масив, що містить всі значення з масивів values кожного об'єкту, збережених в одному масиві. Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+// const data = [
+//   { id: 1, values: [1, 2, 3] },
+//   { id: 2, values: [4, 5, 6] },
+//   { id: 3, values: [7, 8, 9] },
+// ];
+// const flatArray = (arr) => arr.flatMap((item) => item.values);
+
+// const res = flatArray(data);
+// console.log(res);
+
+//TODO:=========task-03=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Перевірте, чи є хоча б один об'єкт з віком менше 20 років. Очікуваний результат: true.
+
+// const people = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
+// ];
+
+// const checkAge = (arr) => arr.some((item) => item.age < 20);
+
+// const res = checkAge(people);
+// console.log(res);
+
+//TODO:=========task-04=================
+//  Дано масив чисел [2, 4, 6, 8, 10]. Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
+
+// const numbers = [2, 5, 6, 8, 10];
+
+// const checkEvenArray = (arr) => arr.every((number) => number % 2 === 0);
+
+// const res = checkEvenArray(numbers);
+// console.log(res);
