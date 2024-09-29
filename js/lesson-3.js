@@ -115,7 +115,147 @@
 //TODO:=========task-10=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
-const numbers = [1, 2, 3, 4, 5];
-const sum = (arr) => arr.reduce((acc, number) => (acc += number), 0);
-const res = sum(numbers);
-console.log(res);
+// const numbers = [1, 2, 3, 4, 5];
+// const sum = (arr) => arr.reduce((acc, number) => (acc += number), 0);
+// const res = sum(numbers);
+// console.log(res);
+
+//TODO:=========task-01=================
+/**
+ * Створи клас для калькулятора, який має такі методи:
+ * - метод number, який набуває початкового значення для наступних операцій
+ * - метод getResult, який повертає фінальний результат усіх операцій, проведених із числом
+ * - методи add, substruct, divide, multiply
+ * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
+ */
+// class Calculator {
+//     constructor() {
+//         this.result = 0;
+//     }
+
+//     number(num) {
+//         this.result += num;
+//         return this;
+//     }
+
+//     getResult() {
+//         return this.result;
+//     }
+
+//     add(num) {
+//         this.result += num;
+//         return this;
+//     }
+//     substruct(num) {
+//         this.result -= num;
+//         return this;
+//     }
+//     divide(num) {
+//         this.result /= num;
+//         return this;
+//     }
+//     multiply(num) {
+//         this.result *= num;
+//         return this;
+//     }
+// }
+
+// const calculator = new Calculator();
+// const calculator1 = new Calculator();
+// // console.log(calculator.result);
+// // window.console.log("Hello");
+
+// const res = calculator.number(10).add(5).multiply(2).getResult();
+// console.log(res);
+// const res1 = calculator1.number(50).add(20).multiply(2).getResult();
+// console.log(res1);
+
+//TODO:=========task-02=================
+/**
+ * Напиши клас Client який створює об'єкт з ​​властивостями login email.
+ *
+ * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
+ */
+
+class Client {
+    #login;
+    #email;
+    constructor(login, email) {
+        this.#login = login;
+        this.#email = email;
+    }
+
+    set changeLogin(newLogin) {
+        this.#login = newLogin;
+    }
+
+    get getLogin() {
+        return this.#login;
+    }
+
+    set changeEmail(newEmail) {
+        this.#email = newEmail;
+    }
+
+    get getEmail() {
+        return this.#email;
+    }
+}
+const olena = new Client("olena", "olena@gmail.com");
+olena.changeLogin = "olena207";
+console.log(olena.getLogin);
+olena.changeEmail = "olena207@gmail.com";
+console.log(olena.getEmail);
+
+//! Практика наслідування у класах.
+//TODO:=========task-04=================
+/**
+  |============Person================
+  | Cтворіть клас `Person`, який містить наступні властивості:
+  |  - `name` - ім'я людини;
+  |  - `age`- вік людини;
+  |  - `gender` - стать людини;
+  |  - `email`- електронна пошта людини.
+  |
+  | ##### Крім того, клас `Person` має мати метод `getDetails()`, який повертає об'єкт з ім'ям, віком, статтю та електронною поштою людини.
+  |============================
+*/
+
+class Person {
+    constructor(name, age, gender, email) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.email = email;
+    }
+    getDetails() {
+        return {
+            name: this.name,
+            age: this.age,
+            gender: this.gender,
+            email: this.email
+        };
+    }
+}
+
+const dmitro = new Person("Dmitro", 25, "male", "dmitro@gmail.com");
+console.log(dmitro);
+
+/**
+  |=============Employee===============
+  |Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+  |  - salary - зарплата співробітника;
+  |  - department - відділ, в якому працює співробітник.
+  |  ##### Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника, зарплатою та відділом, в якому працює співробітник.
+  |============================
+*/
+class Employee extends Person {
+    constructor(salary, department, name, age, gender, email) {
+        super(name, age, gender, email);
+        this.salary = salary;
+        this.department = department;
+    }
+}
+
+const employee = new Employee(5000, "developer", "Bob", 30, "male", "bob@gmail.com");
+console.log(employee);
