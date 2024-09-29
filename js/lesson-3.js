@@ -68,3 +68,54 @@
 
 // const res = checkEvenArray(numbers);
 // console.log(res);
+//TODO:=========task-05=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Знайдіть перший елемент, більший за 3. Очікуваний результат: 4.
+
+// const numbers = [1, 2, 3, 4, 5];
+// const getNumber = (arr) => arr.find((number) => number > 3);
+// const res = getNumber(numbers);
+// console.log(res);
+//TODO:=========task-06=================
+// Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+
+// const numbersArray = [4, 2, 5, 1, 3];
+// const sortedArray = (arr) => arr.toSorted((b, a) => a - b);
+// const res = sortedArray(numbersArray);
+// console.log(res);
+//TODO:===============task-07===============================
+// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
+
+// const stringArray = ["banana", "orange", "apple", "pear"];
+// const sortedArray = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
+// const res = sortedArray(stringArray);
+// console.log(res);
+//TODO:===============task-8===============================
+//  Відсортуйте масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19} за віком у порядку зростання. Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
+
+// const users = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
+// ];
+// const sortedArray = (arr) =>
+//   arr.toSorted((a, b) => a.name.localeCompare(b.name));
+// const res = sortedArray(users);
+// console.log(res);
+//TODO:=========task-09=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
+
+// const user = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
+// ];
+// const getAge = (arr) => arr.filter((item) => item.age > 20);
+// const res = getAge(user);
+// console.log(res);
+//TODO:=========task-10=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
+
+const numbers = [1, 2, 3, 4, 5];
+const sum = (arr) => arr.reduce((acc, number) => (acc += number), 0);
+const res = sum(numbers);
+console.log(res);
