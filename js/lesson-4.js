@@ -117,5 +117,20 @@ function onEscClick(event) {
   }
   modal.close();
   //console.log("Escape");
-  
 }
+
+//TODO:=========task-01=======Accordion==========
+/**
+ * Викоритовуй шаблон акордеон меню з файлу html та напиши наступний функціонал:
+ * при кліку на елемент меню, розкривай блок з текстом.При повторному кліку по елементу,
+ * розкритий текст приховується.Нажимаючи на інші елементи меню, попередньо відкриті елементи не закриваються.
+ */
+
+const list = document.querySelector(".accordion-list");
+
+list.addEventListener("click", (event) => {
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
+  event.target.nextElementSibling.classList.toggle("active");
+});
