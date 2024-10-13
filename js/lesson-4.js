@@ -80,3 +80,42 @@ filmList.insertAdjacentHTML("beforeend", createMarkup(films));
 watchedFilms.forEach(
   (el) => (filmList.querySelector(`#${el}`).style.opacity = 0.5)
 );
+let modal = null;
+const btn = document.querySelector(".modal-btn");
+btn.addEventListener("click", (e) => {
+  modal = basicLightbox.create(
+    `
+        <div class="modal">
+            <p>
+                Your first lightbox with just a few lines of code.
+                Yes, it's really that simple.
+            </p>
+        </div>
+    `,
+    {
+      onShow: () => {
+        document.body.style.overflow = "hidden";
+        document.addEventListener("keydown", onEscClick);
+      },
+      /*
+       * Function that gets executed before the lightbox closes.
+       * Returning false will prevent the lightbox from closing.
+       */
+      onClose: () => {
+        document.body.style.overflow = "visible";
+        document.removeEventListener("keydown", onEscClick);
+      },
+    }
+  );
+
+  modal.show();
+});
+
+function onEscClick(event) {
+  if (event.code !== "Escape") {
+    return;
+  }
+  modal.close();
+  //console.log("Escape");
+  
+}
